@@ -1,0 +1,87 @@
+<!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<title>Randomizer</title>
+    <!-- Bootstrap-->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.theme.min.css"> -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+  	<!--  libraries -->
+  	<script src="assets/js/lib/jquery-v1.8.2.js"></script>
+    <!-- <script src="assets/bootstrap/js/bootstrap.min.js"></script> -->
+  	<script src="assets/js/lib/underscore-v1.5.2.js"></script>
+  	<script src="assets/js/lib/backbone-v0.9.2.js"></script>
+  	<script src="assets/js/lib/backbone-localstorage.js"></script>
+
+  	<script src="assets/js/main.js"></script>
+  	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  </head>
+
+  <body>
+      <div id="" class="container-fluid mr-auto ml-auto">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="outer-container">
+              <div class="container-fluid">
+                <div class="row">
+
+                  <div class="col-md-6" id="buttons">
+                    <button id="file-trigger" class="btn btn-default hidden-trigger">Upload file</button>
+
+                    <button id="pick-winner" class="btn btn-default hidden-trigger">Random pick</button>
+                    <button id="clear-all-safety" class="btn btn-default hidden-trigger">Clear all</button>
+                  </div>
+                  <div id="file-area" class="col-md-6">
+                    <input type="file" id="file-input" name="file-input"/>
+                    <span id="file-sample"></span>
+                    <button type="button btn btn-default" type="submit" id="file-submit">Submit entries</button>
+                  </div>
+                </div>
+              </div>
+
+              <span class="num-entries"></span>
+              <div id="entry-container">
+                <!-- <div class="sub-title">Enter the name</div> -->
+                <div class="">
+                  <input id="name-input" type="text" class="form-control input-sm" placeholder="Input new entry... (click enter to add)"/>
+                </div>
+
+                <div class="">
+                  <div id="name-list-container">
+                    <ul class="name-list left">
+                    </ul>
+                    <ul class="name-list right">
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+
+              <div id="winner-container" class="hidden">
+                <!-- <div class="sub-title">Randomly selecting a name...are you the lucky winner?</div> -->
+                <div class="" id="selecting-name"></div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Templates -->
+      <script type="text/template" id="name-entry-template">
+          <!-- <div class="row"> -->
+          <span class="icon-font remove"></span>
+      	    <span class="name"><%- name %></span>
+          <!-- </div> -->
+      </script>
+
+      <script type="text/template" id="name-winner-template">
+          <div class="icon-font remove"></div>
+          <div class="name col-md-12"><%- name %></div>
+      </script>
+  </body>
+</html>
