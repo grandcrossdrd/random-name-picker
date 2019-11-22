@@ -1,4 +1,4 @@
-Random Name Picker
+Random Name Picker (Improved Version)
 ==================
 
 Simple app that will pick a random name from a list of give names. Will rotate through all the names entered and slowly/eventually pick a winner for the suspense effect if shown on a projector.
